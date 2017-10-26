@@ -72,20 +72,20 @@ public class TestGerente {
         EntityManager em = emf.createEntityManager();
 
         SimpleDateFormat data = new SimpleDateFormat("yyyy-MM-dd");
-        Date dtNascimento = null;
+        Date dtNascimento = new Date();
 
         try {
             dtNascimento = data.parse("1993-12-04");
         } catch (ParseException e) {
             e.printStackTrace();
         }
-
+        
+        Gerente g = em.find(Gerente.class, 1);
+        
         Cabelereiro c = new Cabelereiro("Alexia", "05825845631", "alexia@gmail.com", "123", dtNascimento, 'F',
                 new Endereco("53170280", "rua antorio berenguer", "passarinho", 258, "", "Olinda", "PE"));
-
-        Gerente g = em.find(Gerente.class, 2);
         c.setGerente(g);
-
+        
         em.getTransaction().begin();
         g.setCabelereiro(c);
         em.getTransaction().commit();

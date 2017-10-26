@@ -27,7 +27,7 @@ public class Cabelereiro extends Usuario implements Serializable{
         super(nome, cpf, email, senha, dtNascimento, sexo, endereco);
     }
     
-    @Column(nullable = false, name = "DISPONIVEL")
+    @Column(nullable = true, name = "DISPONIVEL")
     private Boolean disponivel;
     
     @OneToMany(mappedBy = "cabelereiro", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
