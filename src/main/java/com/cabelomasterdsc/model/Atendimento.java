@@ -43,6 +43,7 @@ public class Atendimento implements Serializable{
     @JoinColumn(name = "ID_SERVICO", referencedColumnName = "ID")
     private Servico servico;
     
+    @Transient
     private Float valorTotal;
     
     @ManyToOne(fetch = FetchType.LAZY, optional = false)

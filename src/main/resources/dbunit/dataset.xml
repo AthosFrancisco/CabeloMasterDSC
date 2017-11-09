@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <!--usuário 1, gerente-->
+    <TB_USUARIO discricao_usuario="GERENTE" txt_nome="Athos" txt_cpf="852.258.654-25" txt_email="athos@gmail.com" txt_senha="123" dt_nascimento="1994-12-04" txt_sexo="M"
+                txt_cep="53170280" txt_logradouro="Rua Antônio Berenguer" txt_bairro="Alto da Bondade" num_numero="258" txt_complemento="casa 1" txt_cidade="Olinda" txt_estado="PE"/>
+    <TB_GERENTE id_usuario="1"/>
+    
+    <!--usuário 2, cabelereiro-->
+    <TB_USUARIO discricao_usuario="CABELEREIRO" txt_nome="Alexia" txt_cpf="856.258.654-25" txt_email="alexia@gmail.com" txt_senha="123" dt_nascimento="1994-12-04" txt_sexo="M"
+                txt_cep="53170280" txt_logradouro="Rua Antônio Berenguer" txt_bairro="Alto da Bondade" num_numero="258" txt_complemento="casa 3" txt_cidade="Olinda" txt_estado="PE"/>
+    <TB_CABELEREIRO id_usuario="2" gerente_id_usuario="1" disponivel="true"/>
+    
+    <!--usuário 3, cliente-->
+    <TB_USUARIO discricao_usuario="CLIENTE" txt_nome="Rubenilson" txt_cpf="855.258.654-25" txt_email="rubenilson@gmail.com" txt_senha="123" dt_nascimento="1994-12-04" txt_sexo="M"
+                txt_cep="53170280" txt_logradouro="Rua Antônio Berenguer" txt_bairro="Alto da Bondade" num_numero="258" txt_complemento="casa 2" txt_cidade="Olinda" txt_estado="PE"/>
+    <TB_CLIENTE id_usuario="3"/>
+    <!--usuário 4, cliente-->
+    <TB_USUARIO discricao_usuario="CLIENTE" txt_nome="Alexandre" txt_cpf="857.258.654-25" txt_email="alexandre@gmail.com" txt_senha="123" dt_nascimento="1994-12-04" txt_sexo="M"
+                txt_cep="53170280" txt_logradouro="Rua Antônio Berenguer" txt_bairro="Alto da Bondade" num_numero="258" txt_complemento="casa 2" txt_cidade="Olinda" txt_estado="PE"/>
+    <TB_CLIENTE id_usuario="4"/>
+
+    <!--servico 1-->
+    <TB_SERVICO txt_nome_servico="Alisamento" txt_descricao="alisar" dt_medio_atendimento="00:30:00" dt_pausa="00:00:00" dt_restante_atendimento="00:00:00"/>
+    <TB_SUBSERVICO id_servico="1" txt_nome="escova" num_valor="10.00"/>
+    <TB_SUBSERVICO id_servico="1" txt_nome="chapinha" num_valor="10.00"/>
+    
+    <!--servico 2-->
+    <TB_SERVICO txt_nome_servico="Hidratação" txt_descricao="hidratar" dt_medio_atendimento="00:30:00" dt_pausa="00:00:00" dt_restante_atendimento="00:00:00"/>
+    <TB_SUBSERVICO id_servico="2" txt_nome="escova" num_valor="10.00"/>
+    <TB_SUBSERVICO id_servico="2" txt_nome="chapinha" num_valor="10.00"/>
+    
+    <!--Atendimento 1-->
+    <TB_ATENDIMENTO dt_dia="2017-11-10" dt_final="13:00:00" dt_inicio="12:00:00" cabelereiro_id_usuario="2" cliente_id_usuario="3" id_servico="2"/>
+    <!--Atendimento 2-->
+    <!--<TB_ATENDIMENTO dt_dia="2017-11-10" dt_final="14:00:00" dt_inicio="13:01:00" cabelereiro_id_usuario="2" cliente_id_usuario="4" id_servico="2"/>-->
+</dataset>
